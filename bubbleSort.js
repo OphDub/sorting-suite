@@ -1,4 +1,6 @@
-function bubbleSort () {
+// let array = []
+
+function bubbleSort (array) {
 
 }
 
