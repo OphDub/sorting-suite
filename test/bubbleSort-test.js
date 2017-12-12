@@ -15,7 +15,7 @@ describe('Bubble Sort', () => {
     negNumArray = [1,0,-1,-2];
 
     arr = [];
-    arrLength = 5;
+    arrLength = 9000;
 
     for (let i = 0; i < arrLength; i++) {
       arr.push(Math.floor(Math.random() * arrLength + 1));
@@ -67,5 +67,10 @@ describe('Bubble Sort', () => {
 
     expect(negNumArray[0]).to.equal(-2);
     expect(negNumArray[1]).to.equal(-1);
+  });
+
+  it('expects to handle a large random array', () => {
+    bubbleSort(arr);
+    expect(arr.length).to.equal(9000);
   });
 });
