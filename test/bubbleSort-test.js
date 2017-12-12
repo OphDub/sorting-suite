@@ -8,7 +8,7 @@ describe('Bubble Sort', () => {
   let staticArr;
   let letterArray;
   let negNumArray;
-  
+
   beforeEach(() => {
     staticArr = [4,3,2,1];
     letterArray = ['b','c', 'd', 'a'];
@@ -36,9 +36,9 @@ describe('Bubble Sort', () => {
     expect(staticArr[0]).to.equal(4);
     expect(staticArr[1]).to.equal(3);
     expect(staticArr[0]).to.be.greaterThan(staticArr[1]);
-   
+
     bubbleSort(staticArr);
-   
+
     expect(staticArr[0]).to.equal(1);
     expect(staticArr[1]).to.equal(2);
     expect(staticArr[1]).to.be.greaterThan(staticArr[0]);
@@ -52,7 +52,7 @@ describe('Bubble Sort', () => {
   it('expects to sort letters in an array', () => {
     expect(letterArray[0]).to.equal('b');
     expect(letterArray[1]).to.equal('c');
-  
+
     bubbleSort(letterArray);
 
     expect(letterArray[1]).to.equal('b');
