@@ -2,7 +2,7 @@ const bubbleSort = require('../bubbleSort.js');
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('Bubble Sort', function() {
+describe('Bubble Sort', () => {
   let arr;
   let arrLength;
   let staticArr;
