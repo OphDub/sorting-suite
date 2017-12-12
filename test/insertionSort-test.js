@@ -2,7 +2,7 @@ const insertionSort = require('../insertionSort.js');
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('Insertion Sort', () => {
+describe('Insertion Sort', () => { 
   let arr;
   let arrLength;
   let staticArr;
@@ -29,6 +29,33 @@ describe('Insertion Sort', () => {
   it('expects to take an array as an argument', () => {
     expect(arr).to.be.an('array');
     expect(arr).to.have.lengthOf(arrLength);
-    expect(arr[0]).to.be.a('number');
+  });
+
+  it('expects the array to be unsorted', () => {
+    expect(staticArr[0]).to.equal(4);
+    
+    insertionSort(staticArr);
+
+    expect(staticArr[0]).to.equal(1);
+  });
+
+  it('expects to sort letters in an array', () => {
+    expect(letterArray[0]).to.equal('b');
+    expect(letterArray[1]).to.equal('c');
+  
+    bubbleSort(letterArray);
+
+    expect(letterArray[1]).to.equal('b');
+    expect(letterArray[2]).to.equal('c');
+  });
+
+  it('expects to sort negative numbers', () => {
+    expect(negNumArray[0]).to.equal(1);
+    expect(negNumArray[1]).to.equal(0);
+
+    bubbleSort(negNumArray);
+
+    expect(negNumArray[0]).to.equal(-2);
+    expect(negNumArray[1]).to.equal(-1);
   });
 });

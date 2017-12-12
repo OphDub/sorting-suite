@@ -67,5 +67,5 @@ describe('Bubble Sort', () => {
 
     expect(negNumArray[0]).to.equal(-2);
     expect(negNumArray[1]).to.equal(-1);
-  })
+  });
 });
