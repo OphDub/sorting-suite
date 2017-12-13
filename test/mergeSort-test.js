@@ -8,7 +8,7 @@ describe('Merge Sort', () => {
   let staticArr;
   let letterArray;
   let negNumArray;
-  
+
   beforeEach(() => {
     staticArr = [4,3,2,1];
     letterArray = ['b','c', 'd', 'a'];
@@ -29,5 +29,33 @@ describe('Merge Sort', () => {
   it('expects to take an array as an argument', () => {
     expect(arr).to.be.an('array');
     expect(arr).to.have.lengthOf(arrLength);
+  });
+
+  it('expects the array to be unsorted', () => {
+    expect(staticArr[0]).to.equal(4);
+
+    mergeSort(staticArr);
+
+    expect(staticArr[0]).to.equal(1);
+  });
+
+  it('expects to sort letters in an array', () => {
+    expect(letterArray[0]).to.equal('b');
+    expect(letterArray[1]).to.equal('c');
+
+    mergeSort(letterArray);
+
+    expect(letterArray[1]).to.equal('b');
+    expect(letterArray[2]).to.equal('c');
+  });
+
+  it('expects to sort negative numbers', () => {
+    expect(negNumArray[0]).to.equal(1);
+    expect(negNumArray[1]).to.equal(0);
+
+    mergeSort(negNumArray);
+
+    expect(negNumArray[0]).to.equal(-2);
+    expect(negNumArray[1]).to.equal(-1);
   });
 });

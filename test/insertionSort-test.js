@@ -43,7 +43,7 @@ describe('Insertion Sort', () => {
     expect(letterArray[0]).to.equal('b');
     expect(letterArray[1]).to.equal('c');
 
-    bubbleSort(letterArray);
+    insertionSort(letterArray);
 
     expect(letterArray[1]).to.equal('b');
     expect(letterArray[2]).to.equal('c');
@@ -53,7 +53,7 @@ describe('Insertion Sort', () => {
     expect(negNumArray[0]).to.equal(1);
     expect(negNumArray[1]).to.equal(0);
 
-    bubbleSort(negNumArray);
+    insertionSort(negNumArray);
 
     expect(negNumArray[0]).to.equal(-2);
     expect(negNumArray[1]).to.equal(-1);

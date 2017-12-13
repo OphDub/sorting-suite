@@ -69,7 +69,7 @@ describe('Bubble Sort', () => {
     expect(negNumArray[1]).to.equal(-1);
   });
 
-  it('expects to handle a large random array', () => {
+  it.skip('expects to handle a large random array', () => {
     bubbleSort(arr);
     expect(arr.length).to.equal(9000);
   });
