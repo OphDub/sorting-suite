@@ -1,13 +1,13 @@
 mergeSort = (array) => {
-if (array.length === 1) {
-  return array;
-}
+  if (array.length === 1) {
+    return array;
+  }
 
-let middle = Math.floor(array.length/2);
-let left = (array[0], middle);
-let right = (middle, array.length);
+  let middle = Math.floor(array.length/2);
+  let left = array.slice(0, middle);
+  let right = array.slice(middle, array.length);
 
-return merge(mergeSort(left), mergeSort(right));
+  return merge(mergeSort(left), mergeSort(right));
 };
 
 merge = (left, right) => {
@@ -22,6 +22,6 @@ merge = (left, right) => {
   }
 
   return container;
-}
+};
 
-module.exports = {mergeSort, merge};
+module.exports = mergeSort;

@@ -31,31 +31,27 @@ describe('Merge Sort', () => {
     expect(arr).to.have.lengthOf(arrLength);
   });
 
-  it('expects the array to be unsorted', () => {
-    expect(staticArr[0]).to.equal(4);
+  it('expects the array to be sorted', () => {
+    expect(mergeSort(staticArr)).to.not.equal(staticArr);
 
-    mergeSort(staticArr);
+    const sortedArr = [1, 2, 3, 4];
 
-    expect(staticArr[0]).to.equal(1);
+    expect(mergeSort(staticArr)).to.deep.equal(sortedArr);
   });
 
   it('expects to sort letters in an array', () => {
-    expect(letterArray[0]).to.equal('b');
-    expect(letterArray[1]).to.equal('c');
+    expect(mergeSort(letterArray)).to.not.equal(letterArray);
 
-    mergeSort(letterArray);
+    const sortedLetterArray = [ 'a', 'b', 'c', 'd'];
 
-    expect(letterArray[1]).to.equal('b');
-    expect(letterArray[2]).to.equal('c');
+    expect(mergeSort(letterArray)).to.deep.equal(sortedLetterArray);
   });
 
   it('expects to sort negative numbers', () => {
-    expect(negNumArray[0]).to.equal(1);
-    expect(negNumArray[1]).to.equal(0);
+    expect(mergeSort(negNumArray)).to.not.equal(negNumArray);
 
-    mergeSort(negNumArray);
+    const sortedNegNumArr = [-2, -1, 0, 1];
 
-    expect(negNumArray[0]).to.equal(-2);
-    expect(negNumArray[1]).to.equal(-1);
+    expect(mergeSort(negNumArray)).to.deep.equal(sortedNegNumArr);
   });
 });
