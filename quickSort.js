@@ -15,10 +15,10 @@ quickSort = (array) => {
     }
   }
 
-  return merge (pivot, quickSort(left), quickSort(right));
+  return mergeBack (pivot, quickSort(left), quickSort(right));
 };
 
-merge = (pivot, left, right) => {
+mergeBack = (pivot, left, right) => {
   return left.concat(pivot, right);
 };
 

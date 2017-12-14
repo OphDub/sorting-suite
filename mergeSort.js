@@ -7,10 +7,10 @@ mergeSort = (array) => {
   let left = array.slice(0, middle)
   let right = array.slice(middle, array.length);
 
-  return mergeBack(mergeSort(left), mergeSort(right))
+  return merge(mergeSort(left), mergeSort(right))
  }
 
-mergeBack = ( (left, right) => {
+merge = ( (left, right) => {
  let container = [];
 
   while (left.length || right.length) {
