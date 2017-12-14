@@ -2,6 +2,7 @@ const mergeSort = require('../mergeSort.js');
 const { assert } = require('chai');
 const chai = require('chai');
 const expect = chai.expect;
+chai.use(require("chai-sorted"));
 
 describe('Merge Sort', () => {
   let arr;
@@ -37,4 +38,31 @@ describe('Merge Sort', () => {
 
     expect(mergeSort(orderedArr)).to.deep.equal(orderedArr);
   });
+
+  it('expects to sort letters in an array', () => {
+    expect(mergeSort(letterArray)).to.not.equal(letterArray);
+
+    const sortedLetterArray = [ 'a', 'b', 'c', 'd'];
+
+    expect(mergeSort(letterArray)).to.deep.equal(sortedLetterArray);
+  });
+
+  it('expects to sort negative numbers', () => {
+    expect(mergeSort(negNumArray)).to.not.equal(negNumArray);
+
+    const sortedNegNumArr = [-2, -1, 0, 1];
+
+    expect(mergeSort(negNumArray)).to.deep.equal(sortedNegNumArr);
+  });
+
+  it.skip('expects to sort a large random array of 100,000', () => {
+    arr = [];
+    arrLength = 150000;
+
+    for (let i = 0; i < arrLength; i++) {
+      arr.push(Math.floor(Math.random() * arrLength + 1));
+    }
+
+    expect(mergeSort(arr)).to.be.sorted();
+  })
 });

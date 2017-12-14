@@ -8,7 +8,7 @@ mergeSort = (array) => {
   let right = array.slice(middle, array.length);
 
   return merge(mergeSort(left), mergeSort(right))
- }
+ };
 
 merge = ( (left, right) => {
  let container = [];
