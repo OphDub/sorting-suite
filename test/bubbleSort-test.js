@@ -69,8 +69,14 @@ describe('Bubble Sort', () => {
     expect(negNumArray[1]).to.equal(-1);
   });
 
-  it.skip('expects to handle a large random array', () => {
-    bubbleSort(arr);
-    expect(arr.length).to.equal(9000);
+  it.skip('expects to sort a large random array', () => {
+    arr = [];
+    arrLength = 5000;
+
+    for (let i = 0; i < arrLength; i++) {
+      arr.push(Math.floor(Math.random() * arrLength + 1));
+    }
+
+    expect(bubbleSort(arr)).to.be.sorted();
   });
 });

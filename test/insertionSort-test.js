@@ -58,4 +58,15 @@ describe('Insertion Sort', () => {
     expect(negNumArray[0]).to.equal(-2);
     expect(negNumArray[1]).to.equal(-1);
   });
+
+  it.skip('expects to sort a large random array', () => {
+    arr = [];
+    arrLength = 150000;
+
+    for (let i = 0; i < arrLength; i++) {
+      arr.push(Math.floor(Math.random() * arrLength + 1));
+    }
+
+    expect(insertionSort(arr)).to.be.sorted();
+  });
 });

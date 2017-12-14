@@ -55,7 +55,7 @@ describe('Merge Sort', () => {
     expect(mergeSort(negNumArray)).to.deep.equal(sortedNegNumArr);
   });
 
-  it.skip('expects to sort a large random array of 100,000', () => {
+  it.skip('expects to sort a large random array', () => {
     arr = [];
     arrLength = 150000;
 
@@ -64,5 +64,5 @@ describe('Merge Sort', () => {
     }
 
     expect(mergeSort(arr)).to.be.sorted();
-  })
+  });
 });
