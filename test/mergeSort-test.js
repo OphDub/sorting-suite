@@ -55,9 +55,9 @@ describe('Merge Sort', () => {
     expect(mergeSort(negNumArray)).to.deep.equal(sortedNegNumArr);
   });
 
-  it.skip('expects to sort a large random array', () => {
+  it('expects to sort a large random array of 100,000', () => {
     arr = [];
-    arrLength = 150000;
+    arrLength = 100000;
 
     for (let i = 0; i < arrLength; i++) {
       arr.push(Math.floor(Math.random() * arrLength + 1));

@@ -59,9 +59,9 @@ describe('Insertion Sort', () => {
     expect(negNumArray[1]).to.equal(-1);
   });
 
-  it.skip('expects to sort a large random array', () => {
+  it('expects to sort a large random array of 12,000', () => {
     arr = [];
-    arrLength = 150000;
+    arrLength = 12000;
 
     for (let i = 0; i < arrLength; i++) {
       arr.push(Math.floor(Math.random() * arrLength + 1));

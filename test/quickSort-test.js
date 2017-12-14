@@ -55,9 +55,9 @@ describe('Quick Sort', () => {
     expect(quickSort(negNumArray)).to.deep.equal(sortedNegNumArr);
   });
 
-  it.skip('expects to sort a large random array', () => {
+  it('expects to sort a large random array of 1,000,000', () => {
     arr = [];
-    arrLength = 150000;
+    arrLength = 1000000;
 
     for (let i = 0; i < arrLength; i++) {
       arr.push(Math.floor(Math.random() * arrLength + 1));

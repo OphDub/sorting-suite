@@ -13,13 +13,6 @@ describe('Bubble Sort', () => {
     staticArr = [4,3,2,1];
     letterArray = ['b','c', 'd', 'a'];
     negNumArray = [1,0,-1,-2];
-
-    arr = [];
-    arrLength = 9000;
-
-    for (let i = 0; i < arrLength; i++) {
-      arr.push(Math.floor(Math.random() * arrLength + 1));
-    }
   })
 
   it('expects to be a function', () => {
@@ -27,6 +20,13 @@ describe('Bubble Sort', () => {
   });
 
   it('expects to take an array as an argument', () => {
+    arr = [];
+    arrLength = 5;
+
+    for (let i = 0; i < arrLength; i++) {
+      arr.push(Math.floor(Math.random() * arrLength + 1));
+    }
+
     expect(arr).to.be.an('array');
     expect(arr).to.have.lengthOf(arrLength);
     expect(arr[0]).to.be.a('number');
@@ -69,9 +69,9 @@ describe('Bubble Sort', () => {
     expect(negNumArray[1]).to.equal(-1);
   });
 
-  it.skip('expects to sort a large random array', () => {
+  it('expects to sort a large random array of 9,000', () => {
     arr = [];
-    arrLength = 5000;
+    arrLength = 9000;
 
     for (let i = 0; i < arrLength; i++) {
       arr.push(Math.floor(Math.random() * arrLength + 1));
