@@ -1,25 +1,25 @@
 quickSort = (array) => {
-  if (array.length > 2) {
+  if (array.length < 2) {
     return array;
   }
 
-  let pivot = array.pop();
-  let lessThan = [];
-  let greaterThan = [];
+  let pivot = array[array.length - 1];
+  let left = [];
+  let right = [];
 
-  for (let i = array.length -2; i >= 0; i--) {
-    if (pivot > array[i] {
-      lessThan.push(array.slice(i, 1));
+  for (let i = array.length - 2; i >= 0; i--) {
+    if (pivot > array[i]) {
+      left.push(array[i]);
     } else {
-      greaterThan.push(array.slice(i,1));
+      right.push(array[i]);
     }
   }
 
-  return merge(pivot, lessThan, greaterThan);
-}
+  return merge (pivot, quickSort(left), quickSort(right));
+};
 
-merge = (pivot, lessThan, greaterThan) => {
-  return lessThan.concat(pivot, greaterThan);
-}
+merge = (pivot, left, right) => {
+  return left.concat(pivot, right);
+};
 
 module.exports = quickSort;
